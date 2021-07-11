@@ -28,7 +28,7 @@ footer .linkedIn {
   height: 4em;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1440px) {
   footer {
     margin-top: 100px;
   }
