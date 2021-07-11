@@ -1,0 +1,36 @@
+@import '../variable';
+
+.btn.btn-background-circle{
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: $backgroundColor;
+        z-index: -1;
+
+        border-radius: 50%;
+
+        transition: transform 500ms ease-in-out;
+
+        transform: scale(1.5);
+    }
+
+    z-index: 1;
+    overflow: hidden;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg') center/cover;
+    transition: color 200ms ease-in-out;
+
+    &:hover::before,
+    &:focus::before{
+        border-radius: 5%;
+        transform: scale(0);
+    }
+
+    &:hover, &:focus{
+        border-radius: 5%;
+        color: transparent;
+    }
+}

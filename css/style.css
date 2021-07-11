@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+header {
+  font-size: 40px;
+  font-family: "Lobster Two", cursive;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+footer .github {
+  background-color: inherit;
+  background-image: url("https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/github.svg");
+  width: 4em;
+  height: 4em;
+}
+
+footer .linkedIn {
+  background-color: inherit;
+  background-image: url("https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg");
+  width: 4em;
+  height: 4em;
+}
+
+@media only screen and (min-width: 1024px) {
+  footer {
+    margin-top: 100px;
+  }
+}
+
+.btn.btn-border-pop::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border: 4px solid #b3b3b3;
+  transition: top, left, bottom, right, 100ms ease-in-out;
+}
+
+.btn.btn-border-pop:hover::before, .btn.btn-border-pop:focus::before {
+  top: -16px;
+  right: -16px;
+  bottom: -16px;
+  left: -16px;
+  z-index: 1;
+  background-color: transparent;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg") center/cover;
+  border-radius: 5%;
+}
+
+.btn-background-slide {
+  transition: color 300ms ease-in-out;
+  z-index: 1;
+}
+
+.btn-background-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg") center/cover;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms ease-in-out;
+}
+
+.btn-background-slide:hover::before, .btn-background-slide:focus::before {
+  transform: scaleX(1);
+  border-radius: 5%;
+  background-color: #E30A17;
+}
+
+.btn-background-slide:hover, .btn-background-slide:focus {
+  color: transparent;
+  border-radius: 5%;
+  background-color: #E30A17;
+}
+
+.btn.btn-background-circle {
+  z-index: 1;
+  overflow: hidden;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg") center/cover;
+  transition: color 200ms ease-in-out;
+}
+
+.btn.btn-background-circle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #b3b3b3;
+  z-index: -1;
+  border-radius: 50%;
+  transition: transform 500ms ease-in-out;
+  transform: scale(1.5);
+}
+
+.btn.btn-background-circle:hover::before, .btn.btn-background-circle:focus::before {
+  border-radius: 5%;
+  transform: scale(0);
+}
+
+.btn.btn-background-circle:hover, .btn.btn-background-circle:focus {
+  border-radius: 5%;
+  color: transparent;
+}
+
+.btn.btn-background-split::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(0);
+  background: url("https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg") center/cover;
+}
+
+.btn.btn-background-split:hover::before, .btn.btn-background-split:focus::before {
+  transform: scaleX(1);
+  border-radius: 3%;
+}
+
+.btn.btn-background-split:hover, .btn.btn-background-split:focus {
+  color: transparent;
+  border-radius: 5%;
+}
+
+button {
+  margin: 1rem;
+}
+
+.btn {
+  background-color: #b3b3b3;
+  border: 4px solid black;
+  outline: none;
+  cursor: pointer;
+  padding: 5em 1em;
+  position: relative;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 280px) {
+  .btn {
+    transform: scale(0.75);
+  }
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px;
+}
+
+main {
+  display: grid;
+  grid-template: minmax(300px, 1fr)/repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1024px) {
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}

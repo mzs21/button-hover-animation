@@ -1,0 +1,28 @@
+@import '../variable';
+
+.btn.btn-border-pop{
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        border: $borderSize solid $backgroundColor;
+        transition: top, left, bottom, right, 100ms ease-in-out;
+    }
+    
+
+    &:hover::before, 
+    &:focus::before{
+        top: $borderSize * -4;
+        right: $borderSize * -4;
+        bottom: $borderSize * -4;
+        left: $borderSize * -4;
+        z-index: 1;
+        background-color: transparent;
+        background: url('https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg') center/cover;
+        border-radius: 5%;
+    }
+}

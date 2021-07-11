@@ -1,0 +1,25 @@
+@import 'button/border-pop';
+@import 'button/background-slide';
+@import 'button/background-circle';
+@import 'button/background-split';
+
+button{
+    margin: 1rem;
+}
+
+.btn{
+    background-color: $backgroundColor;
+    border: 4px solid black;
+    outline: none;
+    cursor: pointer;
+    padding: 5em 1em;
+    position: relative;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+    @media #{$media-mobile-galaxy-fold}{
+       transform: scale(0.75);
+    }
+}
+

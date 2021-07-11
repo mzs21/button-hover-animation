@@ -1,0 +1,32 @@
+.btn-background-slide{
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background: url('https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg') center/cover;
+        transform: scaleX(0);
+        transform-origin: left;
+
+        transition: transform 300ms ease-in-out;
+    }
+    
+    transition: color 300ms ease-in-out;
+    z-index: 1;
+
+    &:hover::before,
+    &:focus::before{
+        transform: scaleX(1);
+        border-radius: 5%;
+        background-color: #E30A17;
+    }
+
+    &:hover, &:focus{
+        color: transparent;
+        border-radius: 5%;
+        background-color: #E30A17;
+    }
+}

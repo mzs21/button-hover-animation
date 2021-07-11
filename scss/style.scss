@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import "partial/header";
+@import "partial/footer";
+@import "partial/button";
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 10px;
+}
+
+main{
+    display: grid;
+    grid-template: minmax(300px,1fr) / repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    @media #{$media-desktop}{
+         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    @media #{$media-tablet} 
+    {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
