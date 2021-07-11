@@ -28,12 +28,6 @@ footer .linkedIn {
   height: 4em;
 }
 
-@media only screen and (max-width: 1440px) {
-  footer {
-    margin-top: 100px;
-  }
-}
-
 .btn.btn-border-pop::before {
   content: '';
   position: absolute;
